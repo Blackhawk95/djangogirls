@@ -1,6 +1,12 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/base_blog.html' %}
 
 {% block content %}
+    {% if user.is_authenticated %}
+    <div class="toolbar">
+       <a href="{% url 'post_new' %}"></a>
+    </div>
+    {% endif %}
+
   {% for post in posts %}
     <div class="post">
       <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>

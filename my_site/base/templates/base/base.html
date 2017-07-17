@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Yet Another Django blog</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+        <nav role="navigation">
+          <ul class="nav nav-pills nav-stacked">
+
+          <li><div class="page-header">
+              <h1><a href="/">Yet Another <br> Django blog</a></h1>
+          </div></li>
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation"><a class="active" href="#">Blog</a></li>
+          <li role="presentation"><a href="#">Projects</a></li>
+          <li role="presentation"><a href="#">About</a></li>
+          </ul>
+        </nav>
+        {% block main %}
+        {% endblock %}
+    </body>
+</html>
