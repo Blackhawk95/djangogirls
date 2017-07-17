@@ -72,7 +72,6 @@ h1, h2, h3, h4 {
 
 .toolbar a,.toolbar a:hover, .toolbar a:visited, .toolbar button{
     color: #ffffff;
-    background-color: #455A64;
     display: table;
     margin: 0 auto;
     font-size: 26pt;
