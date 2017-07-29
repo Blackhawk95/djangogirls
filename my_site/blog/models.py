@@ -3,14 +3,15 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-    # TOPIC =(('Env','Environment'),
-    #         ('Tech','Technology'),
-    #         ('Auto','Automotive'),
-    #         ('Otr','Others'),
-    # )
+    TOPIC =(('Blog','Blog'),
+            ('Archive','Archive'),
+            ('Hidden','Hidden'),
+            ('Projects','Projects'),
+            ('Others','Others'),
+    )
     author = models.ForeignKey('auth.User', default = "abhijith")
     title = models.CharField(max_length=200, default = "Enter the title")
-    # topic = models.CharField(max_length=1, choices=TOPIC)
+    topic = models.CharField(max_length=100, choices=TOPIC,default = 'Blog' )
     text = models.TextField()
 
     created_date = models.DateTimeField(default=timezone.now)
